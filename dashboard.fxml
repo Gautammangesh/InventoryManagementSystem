@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutY="14.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@DASHBOARDDESIGN.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="5.0" prefHeight="35.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@DASHBOARDDESIGN.css">
+                           <children>
+                              <FontAwesomeIcon glyphName="TRUCK" layoutX="14.0" layoutY="22.0" size="1.5em" />
+                              <Label layoutX="42.0" layoutY="8.0" text="Inventory Management System">
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="1029.0" layoutY="6.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="70.0" styleClass="close" stylesheets="@DASHBOARDDESIGN.css" AnchorPane.rightAnchor="0.599999999999909" AnchorPane.topAnchor="6.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="958.0" layoutY="6.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="70.0" styleClass="minimize" stylesheets="@DASHBOARDDESIGN.css">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" size="1.2em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="554.0" prefWidth="202.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="-12.0" layoutY="151.0" prefHeight="554.4" prefWidth="202.4" styleClass="nav-form" stylesheets="@DASHBOARDDESIGN.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="#fcfbfb" glyphName="USER" layoutX="68.0" layoutY="111.0" size="7em" />
+                              <Label layoutX="64.0" layoutY="123.0" text="Welcome," textFill="#fcfafa">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutY="145.0" prefHeight="23.0" prefWidth="201.0" text="SPAM.." textFill="#faf6f6">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="77.40000915527344" endY="-1.52587890625E-5" layoutX="112.0" layoutY="189.0" startX="-100.0" stroke="#b4f791" />
+                              <Button layoutX="11.0" layoutY="234.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DASHBOARDDESIGN.css" text="Home" textFill="#f7f1f1">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#f4f2f2" glyphName="HOME" size="2em" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="11.0" layoutY="288.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DASHBOARDDESIGN.css" text="Add Product" textFill="#f7f1f1">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#f4f2f2" glyphName="PLUS" size="2em" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="11.0" layoutY="343.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@DASHBOARDDESIGN.css" text="Orders" textFill="#f7f1f1">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="#f4f2f2" glyphName="CUBE" size="2em" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="Tahoma" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="11.0" layoutY="515.0" mnemonicParsing="false" styleClass="logout" stylesheets="@DASHBOARDDESIGN.css">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="58.0" layoutY="522.0" text="Sign Out" textFill="#f4efef">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="30.0" layoutY="77.0" prefHeight="554.4" prefWidth="899.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" prefHeight="172.0" prefWidth="878.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="15.0" prefHeight="150.0" prefWidth="265.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="14.0" layoutY="96.0" size="5em" />
+                                          <Label layoutX="84.0" layoutY="116.0" stylesheets="@DASHBOARDDESIGN.css" text="Today's Number of Order" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="114.0" layoutY="14.0" prefHeight="23.0" prefWidth="133.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="nav-form" />
+                                          <String fx:value="card1" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="306.0" layoutY="15.0" prefHeight="150.0" prefWidth="265.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="MONEY" layoutX="16.0" layoutY="96.0" size="5em" />
+                                          <Label layoutX="162.0" layoutY="116.0" text="Total Income" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="14.0" prefHeight="23.0" prefWidth="133.0" text="\$0.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="nav-form" />
+                                          <String fx:value="card2" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="598.0" layoutY="15.0" prefHeight="150.0" prefWidth="265.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="CUBE" layoutX="16.0" layoutY="96.0" size="5em" />
+                                          <Label layoutX="122.0" layoutY="116.0" text="Available Products" textFill="WHITE">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER_RIGHT" layoutX="116.0" layoutY="14.0" prefHeight="23.0" prefWidth="133.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font name="Microsoft Sans Serif" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="nav-form" />
+                                          <String fx:value="card3" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="14.0" layoutY="200.0" prefHeight="348.0" prefWidth="878.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="328.0" prefWidth="458.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AreaChart layoutX="-192.0" layoutY="-200.0" prefHeight="328.0" prefWidth="458.4" title="Income Data Chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </AreaChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="503.0" layoutY="12.0" prefHeight="328.0" prefWidth="367.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <BarChart layoutX="-12.0" layoutY="-162.0" prefHeight="328.0" prefWidth="379.0" title="Orders Data Chart" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-12.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="773.0" endY="-1.52587890625E-5" layoutX="113.0" layoutY="181.0" startX="-100.0" stroke="#48a407" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="26.0" layoutY="35.0" prefHeight="554.4" prefWidth="899.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="534.0" prefWidth="314.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="104.0" layoutY="14.0" prefHeight="128.0" prefWidth="115.0" stylesheets="@DASHBOARDDESIGN.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fitHeight="128.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button layoutY="102.0" mnemonicParsing="false" prefWidth="115.0" text="Button" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="41.0" layoutY="173.0" text="Product ID:">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="129.0" layoutY="169.0" prefHeight="26.0" prefWidth="165.0" />
+                                    <Label layoutX="27.0" layoutY="209.0" text="Product Type:">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="71.0" layoutY="250.0" text="Brand:">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="130.0" layoutY="246.0" prefHeight="26.0" prefWidth="165.0" />
+                                    <Label layoutX="16.0" layoutY="290.0" text="Product Name:">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="132.0" layoutY="286.0" prefHeight="26.0" prefWidth="165.0" />
+                                    <Label layoutX="62.0" layoutY="329.0" text="Status:">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="130.0" layoutY="206.0" prefHeight="26.0" prefWidth="165.0" promptText="Choose" />
+                                    <ComboBox layoutX="132.0" layoutY="325.0" prefHeight="26.0" prefWidth="165.0" promptText="Choose" />
+                                    <Button layoutX="37.0" layoutY="389.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" styleClass="add-btn" stylesheets="@DASHBOARDDESIGN.css" text="Add">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="190.0" layoutY="389.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" styleClass="update-btn" stylesheets="@DASHBOARDDESIGN.css" text="Update">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="41.0" layoutY="458.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" styleClass="reset-btn" stylesheets="@DASHBOARDDESIGN.css" text="Reset">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="194.0" layoutY="458.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" styleClass="delete-btn" stylesheets="@DASHBOARDDESIGN.css" text="Delete">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="356.0" layoutY="11.0" prefHeight="534.0" prefWidth="538.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView layoutX="5.0" layoutY="57.0" prefHeight="472.0" prefWidth="530.0">
+                                      <columns>
+                                        <TableColumn prefWidth="85.5999755859375" text="Product ID" />
+                                        <TableColumn prefWidth="108.80001831054688" text="Type" />
+                                          <TableColumn prefWidth="122.39996337890625" text="Brand" />
+                                          <TableColumn prefWidth="108.00006103515625" text="Product Name" />
+                                          <TableColumn prefWidth="105.60009765625" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField layoutX="14.0" layoutY="20.0" prefHeight="30.0" prefWidth="246.0" text="      Search" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="21.0" layoutY="41.0" size="1.5em" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="22.0" prefHeight="554.4" prefWidth="899.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="534.0" prefWidth="566.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView layoutX="5.0" layoutY="14.0" prefHeight="514.0" prefWidth="553.0">
+                                      <columns>
+                                        <TableColumn prefWidth="98.4000072479248" text="Type" />
+                                        <TableColumn prefWidth="106.40003204345703" text="Brand" />
+                                          <TableColumn prefWidth="141.60000610351562" text="Product Name" />
+                                          <TableColumn prefWidth="102.39996337890625" text="Quantity" />
+                                          <TableColumn prefWidth="104.80001831054688" text="Price" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="591.0" layoutY="14.0" prefHeight="534.0" prefWidth="302.0" stylesheets="@DASHBOARDDESIGN.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="35.0" layoutY="40.0" text="Product Type:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="138.0" layoutY="38.0" prefWidth="150.0" />
+                                    <Label layoutX="35.0" layoutY="79.0" text="Brand Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="138.0" layoutY="77.0" prefWidth="150.0" />
+                                    <Label layoutX="28.0" layoutY="117.0" text="Product Name:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="138.0" layoutY="115.0" prefWidth="150.0" />
+                                    <Label layoutX="64.0" layoutY="155.0" prefHeight="18.0" prefWidth="61.0" text="Quantity:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Spinner layoutX="139.0" layoutY="153.0" prefHeight="26.0" prefWidth="125.0" />
+                                    <Button layoutX="33.0" layoutY="445.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" styleClass="reset-btn" stylesheets="@DASHBOARDDESIGN.css" text="Reset">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="33.0" layoutY="370.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" styleClass="receipt-btn" stylesheets="@DASHBOARDDESIGN.css" text="Receipt">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="180.0" layoutY="370.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="95.0" stylesheets="@DASHBOARDDESIGN.css" text="Pay">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="89.0" layoutY="223.0" text="Total:">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="139.0" layoutY="222.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="52.0" layoutY="256.0" text="Amount:">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="139.0" layoutY="254.0" prefWidth="150.0" />
+                                    <Label layoutX="67.0" layoutY="291.0" text="Balance:">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="139.0" layoutY="290.0" text="\$0.0">
+                                       <font>
+                                          <Font name="Arial" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
